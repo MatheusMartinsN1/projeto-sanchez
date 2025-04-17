@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick and Morty</title>
-    <link rel="stylesheet" href="build/styles/mobile.css">
+    
+    <link rel="stylesheet" href="build/styles/mobile.css" media="screen and (min-width: 320px) and (max-width: 768px)">
 </head>
 <body>
     <header class="header">
         <nav class="header__nav">
-
+            <h1><img src="build/images/Rick_and_Morty_logo.png" alt="Logo Rick and Morty"></h1>
+            <ul>
+                <li><a href="#">Sobre Rick</a></li>
+                <li><a href="#">Sobre Morty</a></li>
+                <li><a href="#">Sobre a série</a></li>
+            </ul>
         </nav>
-
-        <div>
-            <img src="src/images/rick-header.jpg" alt="Rick and Morty">
-        </div>
     </header>
 
-    <section class="sobre">
-
+    <section class="sobre__rick">
+        <div class="sobre__rick__container">
+            <h2>Sobre Rick</h2>
+            <img src="build/images/sobre-rick.jpg" alt="Rick and Morty">
+            <p>Rick Sanchez é um dos protagonistas da série animada de ficção científica Rick and Morty. Ele é um cientista genial, alcoólatra e profundamente cínico, conhecido por sua inteligência incomparável, comportamento imprudente e desdém por praticamente todas as formas de autoridade e moralidade.</p>
+            <p>Rick é arrogante, niilista e frequentemente cruel, embora também demonstre, em momentos sutis, um certo carinho por sua família</p>
+        </div>
     </section>
 </body>
 </html>
