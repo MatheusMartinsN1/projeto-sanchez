@@ -5,27 +5,29 @@
     text-align: center;
     padding: 8px;
     background: linear-gradient(to right, variaveis.$corDoPortal , transparent);
-    margin-top: 12px;
+    font-size: 2.5em;
+    margin-top: 20px;
 }
 
 @mixin subTitleH3{
+    font-size: 1.3em;
     padding: 10px;
-    width: 200px;
+    width: 70vw;
     margin: 10px auto;
     border-radius: 6px;
     background-color: variaveis.$corRoupaDoMorty;
-    text-align: center;
+    width: 570px;
+
 }
 
 @mixin imageSize() {
-    display: block;
-    margin: 0px auto;
-    width: 100vw;
+    width: 50vw;
 }
 
 @mixin textAbout() {
     text-indent: 6px;
-    padding: 4px 8px;
+    padding: 4px 16px;
+    
 }
 
 * {
@@ -48,7 +50,7 @@ html {
             text-align: center;
 
             img {
-                width: 250px;
+                width: 350px;
                 padding: 10px;
             }
         }
@@ -61,7 +63,7 @@ html {
                 padding: 10px;
 
                 a {
-                    font-size: 1.2em;
+                    font-size: 26px;
                     text-decoration: none;
                     color: variaveis.$corRoupaDoRick;
                 }
@@ -73,16 +75,23 @@ html {
 .sobre__rick {
 
     &__container {
+        
+
         h2 {
             @include subTitleH2()
         }
 
-        img {
-            @include imageSize()
-        }
+        .tablet__grid {
+            display: flex;
+            align-items: center;
 
-        p {
-            @include textAbout()
+            img {
+                @include imageSize()
+            }
+        
+            p {
+                @include textAbout()
+            }
         }
     }
 }
@@ -90,17 +99,23 @@ html {
 .sobre__morty {
 
     &__container {
+        
 
         h2 {
             @include subTitleH2()
         }
     
-        img {
-            @include imageSize()
-        }
-    
-        p {
-            @include textAbout()
+        .tablet__grid {
+            display: flex;
+            align-items: center;
+
+            img {
+                @include imageSize()
+            }
+        
+            p {
+                @include textAbout()
+            }
         }
     }
 }
@@ -113,12 +128,17 @@ html {
             @include subTitleH2()
         }
         
-        img {
-            @include imageSize()
-        }
+        .tablet__grid {
+            display: flex;
+            align-items: center;
 
-        p {
-            @include textAbout()
+            img {
+                @include imageSize()
+            }
+
+            p {
+                @include textAbout()
+            }
         }
     }
 }
@@ -138,20 +158,25 @@ html {
         }
 
         #temp_one {
-            margin-left: 40px;
+            margin-left: 415px;
         }
 
         h3{
-                .arrow {
-                    display: inline-block;
-                    transition: transform 0.3s ease;
-                    margin-left: 8px;
-                }
+            display: flex;
+            align-items: center;
+
+            .arrow {
+                display: inline-block;
+                transition: transform 0.3s ease;
+                margin-left: 380px;
+                max-width: 1023px;
+            }
 
             @include subTitleH3()
         }
 
         &__item {
+            
             display: none;
             .-is--open {
                 display: block;
@@ -159,9 +184,9 @@ html {
 
             li {
                 text-indent: 6px;
-                width: 330px;
+                width: 80vw;
                 list-style: disc;
-                margin: 0px 50px;
+                margin: 0px 70px;
                 padding: 10px 0px ;
             }
         }
@@ -175,22 +200,24 @@ html {
     }
 
     &__container {
-        width: 300px;
-        display: block;
-        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
         
 
         &__item {
             text-align: center;
-            margin: 16px 0px;
+            margin: 28px 0px;
             
             img {
-                width: 150px;
+                width: 300px;
                 margin: 10px auto;
                 display: block;
             }
 
             p {
+                padding: 18px;
 
                 a {
                     text-decoration: none;
