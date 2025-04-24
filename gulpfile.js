@@ -10,13 +10,13 @@ function styles() {
             style: 'compressed'
         }))
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('./build/styles'))
+        .pipe(gulp.dest('./dist/styles'))
 }
 
 function images() {
     return gulp.src('./src/images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./build/images'))
+        .pipe(gulp.dest('./dist/images'))
 }
 
 exports.default = function() {
