@@ -10,11 +10,13 @@
 
 @mixin subTitleH3{
     padding: 10px;
-    width: 200px;
-    margin: 10px auto;
+    width: 80%;
     border-radius: 6px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: variaveis.$corRoupaDoMorty;
-    text-align: center;
 }
 
 @mixin imageSize() {
@@ -25,7 +27,15 @@
 
 @mixin textAbout() {
     text-indent: 6px;
-    padding: 4px 8px;
+    padding: 10px 20px;
+    text-align: center;
+    color: variaveis.$corRoupaDoRick;
+}
+
+@mixin corDeFundoSection() {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: variaveis.$corDeFundo;
 }
 
 * {
@@ -44,14 +54,12 @@ html {
     &__nav {
         background-color: variaveis.$corDeFundo;
 
-        h1 {
-            text-align: center;
-
             img {
+                display: block;
+                margin: 0px auto;
                 width: 250px;
                 padding: 10px;
             }
-        }
 
         ul {
             display: flex;
@@ -71,6 +79,7 @@ html {
 }
 
 .sobre__rick {
+    @include corDeFundoSection();
 
     &__container {
         h2 {
@@ -88,6 +97,7 @@ html {
 }
 
 .sobre__morty {
+    @include corDeFundoSection();
 
     &__container {
 
@@ -106,6 +116,7 @@ html {
 }
 
 .sobre__serie {
+    @include corDeFundoSection();
 
     &__container {
 
@@ -130,6 +141,8 @@ html {
     }
 
     &__container {
+        max-width: 100%;
+        width: 100%;
 
         h3.-is--open {
             .arrow {
@@ -137,19 +150,16 @@ html {
             }
         }
 
-        #temp_one {
-            margin-left: 40px;
-        }
-
-        h3{
-                .arrow {
-                    display: inline-block;
-                    transition: transform 0.3s ease;
-                    margin-left: 8px;
-                }
-
-            @include subTitleH3()
-        }
+            h3{
+                @include subTitleH3();
+    
+                    .arrow {
+                        display: block;
+                        transition: transform 0.3s ease;
+                        width: auto;
+                        text-align: right;
+                    }
+            }
 
         &__item {
             display: none;

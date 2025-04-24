@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick and Morty</title>
+    <link rel="stylesheet" href="build/styles/desktop.css" media="screen and (min-width: 1024px)">
     <link rel="stylesheet" href="build/styles/tablet.css" media="screen and (min-width: 769px) and (max-width: 1023px)">
     <link rel="stylesheet" href="build/styles/mobile.css" media="screen and (max-width: 768px)">
 </head>
 <body>
     <header class="header">
         <nav class="header__nav">
-            <h1><img src="build/images/rick_and_morty_logo.png" alt="Logo Rick and Morty"></h1>
+            <img src="build/images/rick_and_morty_logo.png" alt="Logo Rick and Morty">
             <ul>
                 <li><a href="#sobre_rick">Sobre Rick</a></li>
                 <li><a href="#sobre_morty">Sobre Morty</a></li>
@@ -19,46 +20,46 @@
         </nav>
     </header>
 
-    <section class="sobre__rick" id="sobre_rick">
-        <div class="sobre__rick__container">
-            <h2>Sobre Rick</h2>
-            <div class="tablet__grid">
-                <img src="build/images/sobre-rick.jpg" alt="Rick Sanchez">
-                <div class="tablet__grid__text">
-                    <p>Rick Sanchez é um dos protagonistas da série animada de ficção científica Rick and Morty. Ele é um cientista genial, alcoólatra e profundamente cínico, conhecido por sua inteligência incomparável, comportamento imprudente e desdém por praticamente todas as formas de autoridade e moralidade.</p>
-                    <p>Rick é arrogante, niilista e frequentemente cruel, embora também demonstre, em momentos sutis, um certo carinho por sua família</p>
+    <div class="sections__container">
+        <section class="sobre__rick" id="sobre_rick">
+            <div class="sobre__rick__container">
+                <h2>Sobre Rick</h2>
+                <div class="tablet__grid">
+                    <img src="build/images/sobre-rick.jpg" alt="Rick Sanchez">
+                    <div class="tablet__grid__text">
+                        <p>Rick Sanchez é um dos protagonistas da série animada de ficção científica Rick and Morty. Ele é um cientista genial, alcoólatra e profundamente cínico, conhecido por sua inteligência incomparável, comportamento imprudente e desdém por praticamente todas as formas de autoridade e moralidade.</p>
+                        <p>Rick é arrogante, niilista e frequentemente cruel, embora também demonstre, em momentos sutis, um certo carinho por sua família.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="sobre__morty" id="sobre_morty">
-        <div class="sobre__morty__container">
-            <h2>Sobre Morty</h2>
-            <div class="tablet__grid">
-                <img src="build/images/sobre-morty.jpg" alt="Morty">
-                <div class="tablet__grid__text">
-                    <p>Morty Smith é um adolescente comum do subúrbio americano, que vive uma vida relativamente normal até que seu avô, Rick, um gênio cientista e alcoólatra, aparece e começa a levá-lo em aventuras cósmicas e interdimensionais.
-                    </p>
-                    <p>Inicialmente, Morty é um garoto tímido, ansioso e moralmente sensível. Ele frequentemente se opõe às decisões antiéticas do avô, servindo como uma consciência moral da dupla. Mas, ao longo da série, ele se torna mais endurecido, questionador e às vezes até sombrio</p>
+        </section>
+        <section class="sobre__morty" id="sobre_morty">
+            <div class="sobre__morty__container">
+                    <h2>Sobre Morty</h2>
+                <div class="tablet__grid">
+                    <img src="build/images/sobre-morty.jpg" alt="Morty">
+                    <div class="tablet__grid__text">
+                        <p>Morty Smith é um adolescente comum do subúrbio americano, que vive uma vida relativamente normal até que seu avô, Rick, um gênio cientista e alcoólatra, aparece e começa a levá-lo em aventuras cósmicas e interdimensionais.
+                        Inicialmente, Morty é um garoto tímido, ansioso e moralmente sensível. Ele frequentemente se opõe às decisões antiéticas do avô, servindo como uma consciência moral da dupla. Mas, ao longo da série, ele se torna mais endurecido, questionador e às vezes até sombrio.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="sobre__serie" id="sobre_serie">
-        <div class="sobre__serie__container">
-            <h2>Sobre a série</h2>
-            <div class="tablet__grid">
-                <img src="build/images/rick-header.jpg" alt="Adult Swim">
-                <div class="tablet__grid__text">
-                    <p>
-                        A série gira em torno das aventuras de Rick Sanchez, um cientista superinteligente, alcoólatra e amorosamente disfuncional, e seu neto adolescente, Morty Smith. Juntos, eles viajam por diferentes planetas, dimensões e realidades, sempre se metendo em encrencas bizarras, muitas vezes mortais, tanto para eles quanto para universos inteiros. O grande diferencial da série é seu uso criativo e extremo do multiverso. Existem infinitas versões de Rick e Morty, espalhadas por incontáveis realidades.
-                    </p>
+        </section>
+        <section class="sobre__serie" id="sobre_serie">
+            <div class="sobre__serie__container">
+                <h2>Sobre a série</h2>
+                <div class="tablet__grid">
+                    <img src="build/images/rick-header.jpg" alt="Adult Swim">
+                    <div class="tablet__grid__text">
+                        <p>
+                            A série gira em torno das aventuras de Rick Sanchez, um cientista superinteligente, alcoólatra e amorosamente disfuncional, e seu neto adolescente, Morty Smith. Juntos, eles viajam por diferentes planetas, dimensões e realidades, sempre se metendo em encrencas bizarras, muitas vezes mortais, tanto para eles quanto para universos inteiros. O grande diferencial da série é seu uso criativo e extremo do multiverso. Existem infinitas versões de Rick e Morty, espalhadas por incontáveis realidades.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section class="temporadas">
         <h2>Linha do tempo resumida</h2>
@@ -79,7 +80,7 @@
             </div>
         </div>
         <div class="temporadas__container">
-            <h3>Temporada 2 e 3 <span class="arrow">&#9660;</span></h3>
+                <h3>Temporada 2 e 3 <span class="arrow">&#9660;</span></h3>
             <div>
                 <ul class="temporadas__container__item">
                     <li>

@@ -6,24 +6,22 @@
     padding: 8px;
     background: linear-gradient(to right, variaveis.$corDoPortal , transparent);
     font-size: 2.5em;
-    margin-top: 20px;
 }
 
 @mixin subTitleH3{
-    font-size: 1.3em;
+    font-size: 1.5em;
     padding: 10px;
     width: 70vw;
     margin: 10px auto;
     border-radius: 6px;
     background-color: variaveis.$corRoupaDoMorty;
-    width: 570px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 @mixin imageSize() {
-    width: 50vw;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 @mixin textAbout() {
@@ -33,11 +31,16 @@
     color: variaveis.$corRoupaDoRick;
 }
 
-@mixin corDeFundoSection() {
+@mixin desktopFlex {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
     margin-top: 20px;
     padding: 10px;
     border-radius: 8px;
+    box-sizing: border-box;
     background-color: variaveis.$corDeFundo;
+    margin: 0px 2px;
 }
 
 * {
@@ -45,10 +48,12 @@
     padding: 0px;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .header {
@@ -59,7 +64,6 @@ html {
             img {
                 display: block;
                 margin: 0px auto;
-                width: 350px;
                 padding: 10px;
             }
 
@@ -71,98 +75,102 @@ html {
                 padding: 10px;
 
                 a {
-                    font-size: 26px;
+                    font-size: 2em;
                     text-decoration: none;
                     color: variaveis.$corRoupaDoRick;
+                    padding: 8px;
+                    
+
+                    &:hover {
+                        background-color: variaveis.$corDoPortal;
+                        border-radius: 8px;
+                        transition: ease 1s;
+                    }
                 }
             }
         }
     }
 }
 
-.sobre__rick {
-    @include corDeFundoSection();
+.sections__container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px auto;
+    width: 100vw;
 
-    &__container {
+    .sobre__rick {
+        @include desktopFlex();
         
 
-        h2 {
-            @include subTitleH2()
-        }
-
-        .tablet__grid {
-            display: flex;
-            align-items: center;
-
-            img {
-                @include imageSize()
-            }
-        
-            p {
-                @include textAbout()
-            }
-        }
-    }
-}
-
-.sobre__morty {
-    @include corDeFundoSection();
-
-    &__container {
-        
-
-        h2 {
-            @include subTitleH2()
-        }
+        &__container {
     
-        .tablet__grid {
-            display: flex;
-            align-items: center;
-
-            img {
-                @include imageSize()
+            h2 {
+                @include subTitleH2()
             }
-        
-            p {
-                @include textAbout()
+    
+    
+                img {
+                    @include imageSize()
+                }
+            
+                p {
+                    @include textAbout
             }
         }
     }
-}
+    
+    .sobre__morty {
+        @include desktopFlex();
+    
+        &__container {
+            
+            h2 {
 
-.sobre__serie {
-    @include corDeFundoSection();
-
-    &__container {
-
-        h2 {
-            @include subTitleH2()
+                @include subTitleH2()
+            }
+    
+                img {
+                    @include imageSize()
+                }
+            
+                p {
+                    @include textAbout()
+                }
         }
-        
-        .tablet__grid {
-            display: flex;
-            align-items: center;
-
-            img {
-                @include imageSize()
+    }
+    
+    .sobre__serie {
+        @include desktopFlex();
+    
+        &__container {
+    
+            h2 {
+                @include subTitleH2();
             }
-
-            p {
-                @include textAbout()
-            }
+                
+    
+                img {
+                    @include imageSize();
+                }
+    
+                p {
+                    @include textAbout();
+                }
         }
     }
 }
 
 .temporadas {
-    max-width: 100;
-    width: 100%;
 
     h2 {
         @include subTitleH2();
+        margin-top: 10px;
     }
 
     &__container {
+        cursor: pointer;
+        width: 70vw;
+        margin: 0px auto;
 
         h3.-is--open {
             .arrow {
@@ -171,7 +179,9 @@ html {
         }
 
         h3{
-            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
             .arrow {
                 display: inline-block;
@@ -216,7 +226,7 @@ html {
 
         &__item {
             text-align: center;
-            margin: 28px 0px;
+            margin: 20px 0px;
             
             img {
                 width: 300px;
