@@ -23,3 +23,5 @@ exports.default = function() {
     gulp.watch('./src/styles/*.scss', {ignoreInitial: false}, gulp.series(styles))
     gulp.watch('./src/images/*', {ignoreInitial: false}, gulp.series(images))
 }
+
+exports.default = gulp.parallel(styles, images)
