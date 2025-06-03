@@ -22,7 +22,7 @@
 @mixin imageSize() {
     display: block;
     margin: 0px auto;
-    width: 100vw;
+    width: 100%;
 }
 
 @mixin textAbout() {
