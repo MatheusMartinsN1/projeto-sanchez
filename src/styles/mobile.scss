@@ -191,6 +191,7 @@ html {
         
 
         &__item {
+            width: 100%;
             text-align: center;
             margin: 16px 0px;
             
@@ -201,7 +202,7 @@ html {
             }
 
             p {
-
+                
                 a {
                     text-decoration: none;
                     color: variaveis.$corDoPortal;
